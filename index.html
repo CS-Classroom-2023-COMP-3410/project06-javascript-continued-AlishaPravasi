@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi To-Do Lists with Themes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Multi To-Do Lists with Themes</h1>
+
+    <div class="list-controls">
+        <input type="text" id="list-name" placeholder="New list name" />
+        <button id="create-list">Create List</button>
+    </div>
+
+    <div id="lists-container">
+        <h2>Your Lists</h2>
+        <ul id="lists"></ul>
+    </div>
+
+    <div class="theme-controls">
+        <h3>Customize Theme</h3>
+        <label for="font-style">Font:</label>
+        <select id="font-style">
+            <option value="Arial, sans-serif">Sans-serif</option>
+            <option value="'Times New Roman', serif">Serif</option>
+            <option value="'Courier New', monospace">Monospace</option>
+        </select>
+
+        <label for="theme-color">Color:</label>
+        <input type="color" id="theme-color">
+        <button id="apply-theme">Apply Theme</button>
+    </div>
+
+    <div class="todo-container">
+        <h2 id="current-list-name">Select a list</h2>
+        <div class="controls">
+            <input type="text" id="task-input" placeholder="Add a new task" />
+            <input type="file" id="task-image" accept="image/*">
+            <button id="add-task">Add Task</button>
+        </div>
+        <div class="filters">
+            <button class="filter-btn" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+            <button class="filter-btn" data-filter="pending">Pending</button>
+        </div>
+        <ul id="task-list" class="task-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
